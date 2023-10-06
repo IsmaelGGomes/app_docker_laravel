@@ -10,8 +10,6 @@ services:
         working_dir: /var/www/
         volumes:
             - ./:/var/www
-        depends_on:
-            - redis
         networks:
             - laravel
 
@@ -40,12 +38,6 @@ services:
             - ./.docker/mysql/dbdata:/var/lib/mysql
         ports:
             - "3388:3306"
-        networks:
-            - laravel
-
-    # redis
-    redis:
-        image: redis:latest
         networks:
             - laravel
 
