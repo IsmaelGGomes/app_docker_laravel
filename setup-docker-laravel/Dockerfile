@@ -1,8 +1,8 @@
 FROM php:8.1-fpm
 
 # set your user name, ex: user=carlos
-ARG user=1000
-ARG uid=1000
+ARG user=www-data
+ARG uid=www-data
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
