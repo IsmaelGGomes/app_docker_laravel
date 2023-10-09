@@ -24,6 +24,8 @@ services:
             - ./docker/nginx/:/etc/nginx/conf.d/
         networks:
             - laravel
+        user: ismael
+        chroot: /var/www
 
     # db mysql
     # db:
